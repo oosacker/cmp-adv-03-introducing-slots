@@ -17,11 +17,14 @@
     </course-goals>
 
     <!-- Dynamic Components -->
+    <!-- Use keep-alive to save input data when switch component!!! -->
     <button @click="setSelectedComp('active-goals')">Active Goals</button>
     <button @click="setSelectedComp('manage-goals')">Manage Goals</button>
     <!-- <active-goals></active-goals>
     <manage-goals></manage-goals> -->
-    <component :is="activeComp"></component>
+    <keep-alive>
+      <component :is="activeComp"></component>
+    </keep-alive>
 
   </div>
 </template>
