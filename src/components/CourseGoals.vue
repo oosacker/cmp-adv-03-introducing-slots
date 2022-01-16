@@ -1,7 +1,8 @@
 <template>
   <ul>
+    <!-- SCOPED SLOTS -->
     <li v-for="goal in goals" :key="goal">
-      <slot :item="goal" another="another 4"></slot>
+      <slot :item="goal" another="test"></slot>
     </li>
   </ul>
 </template>

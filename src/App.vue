@@ -10,10 +10,16 @@
       :role="activeUser.role"
     ></user-info>
 
-    <!-- Slots -->
-    <course-goals #default="slotProps">
-        <h2>{{ slotProps.item }}</h2>
-        <p>{{ slotProps['another'] }}</p>
+    <!-- SCOPED Slots -->
+    <!-- access the "goals" items from outside the slotted component -->
+    <course-goals>
+        <template  v-slot="slotProps">
+          <h1>{{ slotProps.item }}</h1>
+
+          <!-- Another prop has a dash so treat like an array -->
+          <p>{{ slotProps['another'] }}</p>
+          <!-- <p>{{ slotProps['another'] }}</p> -->
+        </template>
     </course-goals>
 
     <!-- Dynamic Components -->

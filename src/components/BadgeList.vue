@@ -2,11 +2,11 @@
   <section>
     <base-card>
 
-      <template #header>
+      <template v-slot:header>
         <!-- <h2>Available Badges</h2> -->
       </template>
 
-      <template #default>
+      <template v-slot:default>
         <ul>
           <li>
             <base-badge type="admin" caption="ADMIN"></base-badge>

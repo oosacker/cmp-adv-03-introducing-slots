@@ -1,6 +1,7 @@
 <template>
   <div>
     <header v-if="$slots.header">
+
       <slot name="header">
         <!-- <h2>DEFAULT TITLE</h2> -->
       </slot>

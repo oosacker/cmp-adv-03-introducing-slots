@@ -1,8 +1,10 @@
 <template>
   <section>
+
+    <!-- slot -->
     <base-card>
 
-      <template #header>
+      <template v-slot:header>
         <h3>{{ fullName }}</h3>
         <base-badge 
           :type="role" 
@@ -10,11 +12,12 @@
         ></base-badge>
       </template>
 
-      <template #default>
+      <template v-slot:default>
         <p>{{ infoText }}</p>
       </template>
 
     </base-card>
+
   </section>
 </template>
 
